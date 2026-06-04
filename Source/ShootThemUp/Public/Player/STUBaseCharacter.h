@@ -56,5 +56,5 @@ private:
     bool WantsToRun = false;
 
     void OnStartRunning();
-    void OnStopRunning();
+    void OnStopRunning(); 
 };
