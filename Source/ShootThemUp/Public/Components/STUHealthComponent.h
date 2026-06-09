@@ -32,7 +32,16 @@ protected:
 	float MaxHealth = 100.0f;
 	
 private:
-   float Health = 0.0f;
+	float Health = 0.0f;
+
+	UPROPERTY(EditDEfaultsOnly, BlueprintReadWrite, Category = "Heal")
+	bool bAutoHeal = false;
+    UPROPERTY(EditDEfaultsOnly, BlueprintReadWrite, Category = "Heal")
+	float HealUpdateTimer = 0.3f;
+    UPROPERTY(EditDEfaultsOnly, BlueprintReadWrite, Category = "Heal")
+	float HealDelay = 3.0f;
+    UPROPERTY(EditDEfaultsOnly, BlueprintReadWrite, Category = "Heal")
+	float HealModifier = 1.0f;
 
    UFUNCTION()
    void OnTakeAnyDamage(
